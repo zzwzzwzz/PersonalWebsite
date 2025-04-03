@@ -1,49 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ziwen Zhou</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ZZ" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    
+    <!-- Profile picture effect -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .hover-tilt:hover {
+            transform: rotate(1deg) scale(1.02);
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <h1>Ziwen Zhou</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50">
+    
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <!-- TODO Make the menu responsive as a hamburger icon when the screen size gets smaller-->
+        <!-- TODO Add an icon to make it switch between dark mode and daylight mode -->
+        <!-- TODO Add a nice background picture -->
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-yellow-400">ZZ</h1>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#about" class="text-slate-600 hover:text-blue-600 transition-colors">About</a></li>
+                    <li><a href="#projects" class="text-slate-600 hover:text-blue-600 transition-colors">Projects</a></li>
+                    <li><a href="#design" class="text-slate-600 hover:text-blue-600 transition-colors">Design</a></li>
+                    <li><a href="#contact" class="text-slate-600 hover:text-blue-600 transition-colors">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm a Web Designer & Full-Stack Developer, a Self-Taught Amateur Cellist, and a Cinephile.</p>
-        <!-- Write about my journey self-taught playing cello with 600 hours of practicing -->
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="project1.html">Project 1</a></li>
-            <li><a href="project2.html">Project 2</a></li>
-            <li><a href="project3.html">Project 3</a></li>
-        </ul>
-    </section>
-    <section id="design">
-        <h2>Design</h2>
-        <!-- Poster Design, logo design, Video -->
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <!-- Add Logos link to other sites like Linkedin, Github, Douban, Bilibili, Rednote -->
-        <p>Email: <a href="mailto:ziwenzhou.zz@gmail.com">ziwenzhou.zz@gmail.com</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Ziwen Zhou</p>
+
+    <!-- Hero Section -->
+    <main class="container mx-auto px-6 py-20">
+        <section class="text-center mb-28 fade-in">
+            <div class="max-w-2xl mx-auto">
+                <p class="text-yellow-500 mb-4">Web Designer & Full-Stack Developer</p>
+                <h2 class="text-4xl font-bold text-slate-800 mb-6">Creating Digital Experiences with Art & Code</h2>
+                <div class="flex justify-center space-x-4">
+                    <a href="#contact" class="bg-yellow-500 text-white px-8 py-3 rounded-full hover:bg-yellow-700 transition-all">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-28 scroll-mt-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold text-slate-800 mb-6">About Me</h2>
+                    <!-- TODO Need to adjust the picture and content view -->
+                    <img src="images/ziwenzhou.jpg" alt="Ziwen Zhou" 
+                     class="rounded-2xl shadow-xl hover-tilt transition-transform duration-300">
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        <!-- TODO Update content later -->
+                        Hi! I'm Ziwen, or you can also call me ZZ or Zizi. I am passionate about creating beautiful and functional websites. With a background in both design and development, I strive to bridge the gap between aesthetics and technology. When I'm not coding, you can find me playing the cello or binge watching movies. :)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-28 scroll-mt-20">
+            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-slate-100 rounded-lg mb-4"></div>
+                    <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+                    <p class="text-slate-600 mb-4">Short project description highlighting technologies used.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Node.js</span>
+                    </div>
+                </div>
+                <!-- TODO Add more project cards -->
+                <!-- TODO Add icon link to the project and github pages -->
+            </div>
+        </section>
+
+        <!-- Design Section -->
+        <section id="design" class="mb-28 scroll-mt-20">
+            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">Design Works</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square bg-slate-100 rounded-xl"></div>
+                <!-- Add more design thumbnails -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-28 scroll-mt-20">
+            <div class="max-w-lg mx-auto text-center">
+                <h2 class="text-4xl font-bold text-slate-800 mb-8">Let's Connect!</h2>
+                <p class="text-slate-600 mb-8">Interested in chatting about music and coding? Find me in the following social media:</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-slate-600 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <!-- Add more social icons, Douban, Bilibili, Rednote-->
+                </div>
+                <a href="mailto:ziwenzhou.zz@gmail.com" 
+                   class="text-yellow-500 hover:text-yellow-700 font-medium">
+                    ziwenzhou.zz@gmail.com
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- TODO Need to add a going-to-top button -->
+
+    <footer class="bg-yellow-500 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Ziwen Zhou. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Simple fade-in animations effect-->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
