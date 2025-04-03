@@ -6,6 +6,7 @@
     <title>Ziwen Zhou</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- TODO Need to update the favicon again with transparent background -->
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
@@ -14,8 +15,8 @@
     <meta name="apple-mobile-web-app-title" content="ZZ" />
     <link rel="manifest" href="favicon/site.webmanifest" />
     
-    <!-- Profile picture effect -->
     <style>
+        /* Profile picture animation effect */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -29,7 +30,7 @@
     </style>
 </head>
 
-<body class="bg-gradient-to-br from-slate-50 to-blue-50">
+<body class="bg-gradient-to-br from-slate-50 to-yellow-50 dark-mode-transition">
     
     <!-- Sticky Navigation Header -->
     <header class="sticky top-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
@@ -40,16 +41,16 @@
             <div class="flex justify-between items-center">
                 <h1 class="text-2xl font-bold text-yellow-400">ZZ</h1>
                 <ul class="hidden md:flex space-x-8">
-                    <li><a href="#about" class="text-slate-600 hover:text-blue-600 transition-colors">About</a></li>
-                    <li><a href="#projects" class="text-slate-600 hover:text-blue-600 transition-colors">Projects</a></li>
-                    <li><a href="#design" class="text-slate-600 hover:text-blue-600 transition-colors">Design</a></li>
-                    <li><a href="#contact" class="text-slate-600 hover:text-blue-600 transition-colors">Contact</a></li>
+                    <li><a href="#about" class="text-slate-600 hover:text-yellow-600 transition-colors">About</a></li>
+                    <li><a href="#projects" class="text-slate-600 hover:text-yellow-600 transition-colors">Projects</a></li>
+                    <li><a href="#design" class="text-slate-600 hover:text-yellow-600 transition-colors">Design</a></li>
+                    <li><a href="#contact" class="text-slate-600 hover:text-yellow-600 transition-colors">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Intro Section -->
     <main class="container mx-auto px-6 py-20">
         <section class="text-center mb-28 fade-in">
             <div class="max-w-2xl mx-auto">
@@ -66,15 +67,15 @@
         <!-- About Section -->
         <section id="about" class="mb-28 scroll-mt-20">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <h2 class="text-4xl font-bold text-slate-800 mb-6">About Me</h2>
-                    <!-- TODO Need to adjust the picture and content view -->
-                    <img src="images/ziwenzhou.jpg" alt="Ziwen Zhou" 
-                     class="rounded-2xl shadow-xl hover-tilt transition-transform duration-300">
-                    <p class="text-slate-600 text-lg leading-relaxed">
-                        <!-- TODO Update content later -->
+                <div class="order-2 md:order-1">
+                    <h2 class="text-4xl font-bold text-slate-800 dark:text-slate-100 mb-6">About Me</h2>
+                    <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
                         Hi! I'm Ziwen, or you can also call me ZZ or Zizi. I am passionate about creating beautiful and functional websites. With a background in both design and development, I strive to bridge the gap between aesthetics and technology. When I'm not coding, you can find me playing the cello or binge watching movies. :)
                     </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="images/ziwenzhou.jpg" alt="Ziwen Zhou" 
+                         class="rounded-2xl shadow-xl hover-tilt transition-transform duration-300 w-full max-w-md mx-auto">
                 </div>
             </div>
         </section>
@@ -136,8 +137,8 @@
         </div>
     </footer>
 
-    <!-- Simple fade-in animations effect-->
     <script>
+        // Simple fade-in animations effect
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
