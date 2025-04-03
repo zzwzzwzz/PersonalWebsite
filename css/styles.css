@@ -26,3 +26,25 @@
 0%, 100% { transform: translateY(0); }
 50% { transform: translateY(-3px); }
 }
+
+/* Consistent animations */
+#mobile-menu {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+#mobile-menu:not(.hidden) {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Match hover-tilt effect */
+#mobile-menu-button:hover i {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+#mobile-menu-button:hover {
+    transform: scale(1.05);
+}

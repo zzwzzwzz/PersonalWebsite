@@ -7,6 +7,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Griffy&display=swap" rel="stylesheet">
     
     <!-- External Libraries -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,18 +30,37 @@
     
     <!-- Sticky Navigation Header -->
     <header class="sticky top-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
-        <!-- TODO Make the menu responsive as a hamburger icon when the screen size gets smaller-->
-        <!-- TODO Add an icon to make it switch between dark mode and daylight mode -->
-        <!-- TODO Add a nice background picture -->
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <h1 class="text-3xl font-bold text-yellow-400"><a href="index.html">ZZ</a></h1>
+                <!-- Logo -->
+                <h1 class="text-3xl font-[Griffy] font-bold text-yellow-400"><a href="index.html">ZZ</a></h1>
+                
+                <!-- Desktop Menu -->
                 <ul class="hidden md:flex space-x-8">
                     <li><a href="#about" class="text-slate-600 hover:text-yellow-600 transition-colors">About</a></li>
                     <li><a href="#projects" class="text-slate-600 hover:text-yellow-600 transition-colors">Projects</a></li>
                     <li><a href="#design" class="text-slate-600 hover:text-yellow-600 transition-colors">Design</a></li>
                     <li><a href="#contact" class="text-slate-600 hover:text-yellow-600 transition-colors">Contact</a></li>
                 </ul>
+    
+                <!-- Mobile Menu Button -->
+                <button 
+                    id="mobile-menu-button" 
+                    class="md:hidden p-2 rounded-lg transition-all"
+                    aria-label="Mobile menu"
+                >
+                    <i class="fas fa-bars text-slate-600 text-xl transition-transform duration-300"></i>
+                </button>
+            </div>
+    
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden md:hidden absolute right-2 mt-4 bg-white rounded-lg shadow-lg py-2 border border-gray-100">
+                <div class="space-y-2 px-4">
+                    <a href="#about" class="block py-2 text-slate-600 hover:text-yellow-600 transition-colors">About</a>
+                    <a href="#projects" class="block py-2 text-slate-600 hover:text-yellow-600 transition-colors">Projects</a>
+                    <a href="#design" class="block py-2 text-slate-600 hover:text-yellow-600 transition-colors">Design</a>
+                    <a href="#contact" class="block py-2 text-slate-600 hover:text-yellow-600 transition-colors">Contact</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -47,7 +69,7 @@
     <main class="container mx-auto px-6 py-20">
         <section class="text-center mb-28 fade-in">
             <div class="max-w-2xl mx-auto">
-                <p class="text-3xl text-yellow-500 mb-4">Ziwen Zhou</p>
+                <p class="text-4xl text-yellow-500 mb-4 font-[Griffy] transform">Ziwen Zhou</p>
                 <h2 class="text-4xl font-bold text-slate-800 mb-6">Creating Digital Experiences with Art & Code</h2>
                 <div class="flex justify-center space-x-4">
                     <a href="#contact" class="bg-yellow-500 text-white px-8 py-3 rounded-full hover:bg-yellow-700 transition-all">
@@ -107,7 +129,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="mb-28 scroll-mt-20">
+        <section id="contact" class="mb-2 scroll-mt-20">
             <div class="max-w-lg mx-auto text-center">
                 <h2 class="text-4xl font-bold text-slate-800 mb-8">Let's Connect!</h2>
                 <p class="text-slate-600 mb-8">Currently looking for opportunities to work on exciting projects and expand my skill set. If you're interested in collaborating or just want to chat, feel free to reach out!</p>
