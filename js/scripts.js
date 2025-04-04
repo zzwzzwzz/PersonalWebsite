@@ -131,49 +131,35 @@ particlesJS('particles-js', {
 
 
 // Less redundant code for the project cards
-// Project data
-const projects = [
-    {
-        title: "From Far Away to G'Day",
-        image: "images/fishtalk.png",
-        alt: "Fish Talk's documentary project From Far Away to G'Day",
-        description: "From Far Away to G'Day is a documentary spotlighting six Asian immigrants' transformative journeys in Australia, from international students to community pioneers. For this project, I help with designing the pitch deck, film posters and maintaining the website using Wix.",
-        projectLink: "https://www.fishtalkglobal.com/fromfarawaytogday",
-        codeLink: "",
-        donateLink: "https://documentaryaustralia.com.au/project/from-far-away-to-gday/",
-        skills: ["Poster Design", "Web Design", "Wix", "SEO", "Marketing"]
-    },
-    {
-        title: "Personal Website",
-        image: "images/mainbg.JPG",
-        alt: "Ziwen Zhou's Personal Website and Portfolio",
-        description: "Ziwen Zhou's Personal Website and Portfolio (Current website). A Sydney-based full-stack developer and designer combining technical experience with musical and cinematic storytelling.",
-        projectLink: "https://ziwenzhou.com/",
-        codeLink: "https://github.com/zzwzzwzz/PersonalWebsite",
-        skills: ["HTML", "Tailwind CSS", "JavaScript", "Responsive Design", "Cloudflare", "Web Design"]
-    },
-    {
-        title: "Mind Capsule",
-        image: "images/MindCapsule.png",
-        alt: "MindCapsule",
-        description: "MindCapsule is a Full-Stack Hackathon (UNIHACK 2025) project, designed to help individuals better understand and manage their emotions, using principles from Cognitive Behavioral Therapy (CBT). Name was inspired by Time Capsule.",
-        projectLink: "https://mindcapsule-sirius.vercel.app/",
-        caseStudyLink: "https://devpost.com/software/sirius-gqlych",
-        codeLink: "https://github.com/zzwzzwzz/MindCapsule",
-        skills: ["HTML", "Tailwind CSS", "Node.js", "JavaScript", "MongoDB", "Vercel", "Rapid Prototyping"]
-    },
-    {
-        title: "Be There",
-        image: "images/BeThere.png",
-        alt: "BeThere",
-        description: "BeThere is an iOS app built with Swift by our team BlueOPERAT via Apple Foundation Program @UTS, it connects Working Holiday Visa (WHV) holders in Australia in small groups of 6 to foster real-world meetups, using playful AI (A Rat Bot) to spark conversations and ensure active engagement.",
-        codeLink: "https://github.com/zzwzzwzz/BeThere",
-        skills: ["Swift", "iOS Development", "Design Thinking", "Rapid Prototyping"]
-    }
-];
+// Fetch project data
+fetch('data/projects.json')
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(projects => {
+        generateProjectCards(projects);
+    })
+    .catch(error => {
+        console.error('Error fetching project data:', error);
+        // Fallback to hardcoded projects if fetch fails
+        generateProjectCards([
+            {
+                title: "Fetch Error Placeholder",
+                image: "images/mainbg.png",
+                alt: "Project Example Placeholder",
+                description: "This is a fallback project shown when the JSON data cannot be loaded.",
+                projectLink: "#",
+                codeLink: "#",
+                skills: ["Web Development"]
+            }
+        ]);
+    });
 
 // Generate project cards
-function generateProjectCards() {
+function generateProjectCards(projects) {
     const container = document.getElementById('project-container');
     
     projects.forEach(project => {
