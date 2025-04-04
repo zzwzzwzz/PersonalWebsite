@@ -169,17 +169,17 @@ function generateProjectCards(projects) {
         // Links section
         let links = '';
         if (project.projectLink) {
-            links += `<a href="${project.projectLink}" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
+            links += `<a href="${project.projectLink}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="View project">
                         <i class="fas fa-external-link-alt"></i>
                       </a>`;
         }
         if (project.codeLink) {
-            links += `<a href="${project.codeLink}" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
+            links += `<a href="${project.codeLink}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="View code on GitHub">
                         <i class="fab fa-github"></i>
                       </a>`;
         }
         if (project.donateLink) {
-            links += `<a href="${project.donateLink}" class="social-icon hover:text-yellow-600 transition-colors" aria-label="Donate and Support">
+            links += `<a href="${project.donateLink}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Donate and Support">
                         <i class="fa-solid fa-hand-holding-heart"></i>
                       </a>`;
         }
@@ -200,6 +200,8 @@ function generateProjectCards(projects) {
                     loading="lazy"
                 >
                 <a href="${project.caseStudyLink || project.projectLink || '#'}" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
                    class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <span class="text-white font-medium">${project.caseStudyLink ? 'View Case Study →' : 'View →'}</span>
                 </a>
@@ -221,3 +223,35 @@ function generateProjectCards(projects) {
     });
 }
 // Less reduncdant code for the project cards over
+
+// Make all external links open in new tabs
+function setupExternalLinks() {
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all links that start with http:// or https:// or start with mailto:
+        const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="mailto:"]');
+        
+        externalLinks.forEach(link => {
+            // Skip if it's an anchor link (starts with #) or doesn't have href
+            if (!link.getAttribute('href') || link.getAttribute('href').startsWith('#')) {
+                return;
+            }
+            
+            // Skip if it's already set
+            if (link.getAttribute('target') === '_blank') {
+                return;
+            }
+            
+            // Don't affect internal navigation
+            if (link.getAttribute('href').includes(window.location.hostname)) {
+                return;
+            }
+            
+            // Add target="_blank" and security attributes
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+        });
+    });
+}
+
+// Call the function
+setupExternalLinks();
