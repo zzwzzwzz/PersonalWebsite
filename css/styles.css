@@ -111,10 +111,25 @@ h1.font-\[Griffy\] a {
 /* Video gallery styles */
 .video-item {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .video-item:hover {
     transform: translateY(-5px);
+}
+
+/* Fix for the black bars on video thumbnails */
+.video-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Makes the image cover the entire container */
+    object-position: center; /* Centers the image */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.video-item:hover img {
+    transform: scale(1.05); /* Slightly larger zoom on hover */
 }
 
 /* YouTube Thumbnail Overlay */
@@ -130,6 +145,13 @@ h1.font-\[Griffy\] a {
 
 .video-item:hover::before {
     opacity: 1;
+}
+
+/* Ensure the overlay content is properly positioned */
+.video-item .text-center {
+    z-index: 2;  /* Make sure text appears above the overlay */
+    width: 80%;  /* Prevent text from stretching too wide */
+    max-width: 300px;
 }
 
 /* ============================================
