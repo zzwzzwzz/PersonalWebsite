@@ -75,15 +75,15 @@ function setTheme(isDark) {
     if (isDark) {
         body.classList.add('dark-mode');
         document.querySelectorAll('#theme-toggle-desktop i, #theme-toggle-mobile i').forEach(icon => {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
         });
         localStorage.setItem('theme', 'dark');
     } else {
         body.classList.remove('dark-mode');
         document.querySelectorAll('#theme-toggle-desktop i, #theme-toggle-mobile i').forEach(icon => {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
         });
         localStorage.setItem('theme', 'light');
     }
