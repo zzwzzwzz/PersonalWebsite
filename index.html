@@ -40,7 +40,7 @@
                 <ul class="hidden md:flex items-center space-x-8">
                     <li><a href="#about" class="text-slate-600 hover:text-yellow-600 transition-colors">About</a></li>
                     <li><a href="#projects" class="text-slate-600 hover:text-yellow-600 transition-colors">Projects</a></li>
-                    <li><a href="#design" class="text-slate-600 hover:text-yellow-600 transition-colors">Design</a></li>
+                    <li><a href="#video" class="text-slate-600 hover:text-yellow-600 transition-colors">Video</a></li>
                     <li><a href="#contact" class="text-slate-600 hover:text-yellow-600 transition-colors">Contact</a></li>
                     
                     <!-- Dark Mode Toggle for Desktop -->
@@ -82,7 +82,7 @@
                 <div class="space-y-2 px-4">
                     <a href="#about" class="block py-2 text-slate-600 hover:text-yellow-600 transition-colors">About</a>
                     <a href="#projects" class="block py-2 text-slate-600 hover:text-yellow-600 transition-colors">Projects</a>
-                    <a href="#design" class="block py-2 text-slate-600 hover:text-yellow-600 transition-colors">Design</a>
+                    <a href="#video" class="block py-2 text-slate-600 hover:text-yellow-600 transition-colors">Video</a>
                     <a href="#contact" class="block py-2 text-slate-600 hover:text-yellow-600 transition-colors">Contact</a>
                 </div>
             </div>
@@ -135,14 +135,45 @@
             </div>
         </section>
 
-        <!-- Design Section -->
-        <section id="design" class="mb-28 scroll-mt-20">
-            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">Featured Design</h2>
-            <div class="design-gallery grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="design-item aspect-square bg-slate-100 rounded-xl cursor-pointer overflow-hidden"></div>
-                <div class="design-item aspect-square bg-slate-100 rounded-xl cursor-pointer overflow-hidden"></div>
-                <div class="design-item aspect-square bg-slate-100 rounded-xl cursor-pointer overflow-hidden"></div>
-                <div class="design-item aspect-square bg-slate-100 rounded-xl cursor-pointer overflow-hidden"></div>
+        <!-- Video Section -->
+        <section id="video" class="mb-28 scroll-mt-20">
+            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">Featured Videos</h2>
+            <div class="video-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- AChallenge Video Item -->
+                <a href="https://youtu.be/lhmj1QakChg" 
+                   class="video-item group relative aspect-video bg-slate-100 rounded-xl overflow-hidden transition-all hover:shadow-lg"
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <img src="https://img.youtube.com/vi/lhmj1QakChg/hqdefault.jpg" 
+                         alt="A Challenge stop-motion video thumbnail"
+                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center">
+                            <i class="fas fa-play text-4xl text-white mb-2"></i>
+                            <h3 class="text-white font-semibold">A Challenge</h3>
+                            <p class="text-sm text-white/80">A 30s stop-motion film about a skeleton facing a big challenge and learn to work smarter, not just work hard.</p>
+                        </div>
+                    </div>
+                </a>
+        
+                <!-- CelloRoutine video -->
+                <a href="https://youtu.be/gBpcUGxzucY" 
+                   class="video-item group relative aspect-video bg-slate-100 rounded-xl overflow-hidden transition-all hover:shadow-lg"
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <img src="https://img.youtube.com/vi/gBpcUGxzucY/hqdefault.jpg" 
+                         alt="Cello Routine Video thumbnail"
+                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-center">
+                            <i class="fas fa-play text-4xl text-white mb-2"></i>
+                            <h3 class="text-white font-semibold">Cello Routine</h3>
+                            <p class="text-sm text-white/80">An Adobe Premiere Pro project that demonstrates the daily cello-practice routine on the day 2021.4.18.</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </section>
 

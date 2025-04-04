@@ -4,7 +4,7 @@
    1. Animations & Keyframes
    2. General Element Styles
    3. Navigation & Menu Styles
-   4. Project & Design Gallery Styles
+   4. Project & Video Gallery Styles
    5. Profile & Social Link Styles
    6. Dark Mode Styles
    ============================================ */
@@ -92,7 +92,7 @@ h1.font-\[Griffy\] a {
 }
 
 /* ============================================
-   4. PROJECT & DESIGN GALLERY STYLES
+   4. PROJECT & Video GALLERY STYLES
    ============================================ */
 /* Project cards */
 .project-card {
@@ -108,15 +108,28 @@ h1.font-\[Griffy\] a {
     overflow: hidden;
 }
 
-/* Design gallery */
-.design-item {
-    transition: all 0.3s ease; 
-    position: relative;
+/* Video gallery styles */
+.video-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.design-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+/* YouTube Thumbnail Overlay */
+.video-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.video-item:hover::before {
+    opacity: 1;
 }
 
 /* ============================================
@@ -250,9 +263,17 @@ body.dark-mode .bg-gray-100 {
     color: #cbd5e1ed;
 }
 
-/* Design gallery */
-body.dark-mode .design-item {
+/* Video gallery */
+body.dark-mode .video-item {
     background-color: #475569;
+}
+
+body.dark-mode .video-item img {
+    filter: brightness(0.85);
+}
+
+body.dark-mode .video-item:hover img {
+    filter: brightness(0.75);
 }
 
 /* Back to top button */
