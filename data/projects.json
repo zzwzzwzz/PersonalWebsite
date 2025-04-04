@@ -10,15 +10,6 @@
         "skills": ["Poster Design", "Web Design", "Wix", "SEO", "Marketing"]
     },
     {
-        "title": "Personal Website",
-        "image": "images/mainbg.JPG",
-        "alt": "Ziwen Zhou's Personal Website and Portfolio",
-        "description": "Ziwen Zhou's Personal Website and Portfolio (Current website). A Sydney-based full-stack developer and designer combining technical experience with musical and cinematic storytelling.",
-        "projectLink": "https://ziwenzhou.com/",
-        "codeLink": "https://github.com/zzwzzwzz/PersonalWebsite",
-        "skills": ["HTML", "Tailwind CSS", "JavaScript", "JSON", "Responsive Design", "Cloudflare", "Web Design"]
-    },
-    {
         "title": "Mind Capsule",
         "image": "images/MindCapsule.png",
         "alt": "MindCapsule",
