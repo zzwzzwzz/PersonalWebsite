@@ -1,33 +1,94 @@
-/* FadeIn Animations */
+/* ============================================
+   TABLE OF CONTENTS:
+   
+   1. Animations & Keyframes
+   2. General Element Styles
+   3. Navigation & Menu Styles
+   4. Project & Design Gallery Styles
+   5. Profile & Social Link Styles
+   6. Dark Mode Styles
+   ============================================ */
+
+/* ============================================
+   1. ANIMATIONS & KEYFRAMES
+   ============================================ */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.visible {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-in-right.visible {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.fade-in-left.visible {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+/* Staggered animation for child elements */
+.stagger-fade-in > * {
+    opacity: 0;
+}
+
+.stagger-fade-in.visible > * {
+    animation: fadeIn 0.5s ease-out forwards;
 }
 
 .fade-in {
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-.hover-tilt:hover {
-    transform: rotate(1deg) scale(1.02);
-}
-
-/* Dark mode transition */
+/* General transitions */
 .dark-mode-transition * {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Back to Top Button */
-#back-to-top:hover i {
-    animation: bounce 0.6s infinite;
+/* ============================================
+   2. GENERAL ELEMENT STYLES
+   ============================================ */
+/* Smoother scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
+/* Logo animation */
+h1.font-\[Griffy\] {
+    transition: transform 0.3s ease;
 }
 
-/* Consistent animations */
+h1.font-\[Griffy\]:hover {
+    transform: scale(1.1);
+}
+
+h1.font-\[Griffy\] a {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   3. NAVIGATION & MENU STYLES
+   ============================================ */
+/* Mobile menu animations */
 #mobile-menu {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(-10px);
@@ -39,7 +100,7 @@
     opacity: 1;
 }
 
-/* Match hover-tilt effect */
+/* Mobile menu button */
 #mobile-menu-button:hover i {
     transform: rotate(90deg);
     transition: transform 0.3s ease;
@@ -49,18 +110,26 @@
     transform: scale(1.05);
 }
 
-/* Theme Toggle Animation */
-#theme-toggle-desktop:hover i,
-#theme-toggle-mobile:hover i {
-    transform: rotate(30deg);
-}
-
+/* Theme toggle buttons */
 #theme-toggle-desktop i,
 #theme-toggle-mobile i {
     transition: transform 0.5s ease;
 }
 
-/* Project Card Hover Effects */
+#theme-toggle-desktop:hover i,
+#theme-toggle-mobile:hover i {
+    transform: rotate(60deg);
+}
+
+/* Back to top button */
+#back-to-top:hover i {
+    animation: bounce 0.6s infinite;
+}
+
+/* ============================================
+   4. PROJECT & DESIGN GALLERY STYLES
+   ============================================ */
+/* Project cards */
 .project-card {
     transition: all 0.3s ease;
 }
@@ -85,7 +154,10 @@
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Profile image effects */
+/* ============================================
+   5. PROFILE & SOCIAL LINK STYLES
+   ============================================ */
+/* Profile image */
 .profile-container {
     position: relative;
     overflow: hidden;
@@ -100,22 +172,30 @@
     transform: scale(1.03);
 }
 
-/* Social icons animation */
+/* Social icons */
 .social-icon {
     display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
     transform: scale(1.2);
-    transition: transform 0.3s ease;
 }
 
-/* Dark Mode Styles */
+.hover-tilt:hover {
+    transform: rotate(1deg) scale(1.02);
+}
+
+/* ============================================
+   6. DARK MODE STYLES
+   ============================================ */
+/* Base dark mode styles */
 body.dark-mode {
     background: linear-gradient(to bottom right, #1e293b, #334155);
     color: #f8fafc;
 }
 
+/* Header & navigation */
 body.dark-mode header {
     background-color: rgba(30, 41, 59, 0.8);
 }
@@ -136,6 +216,7 @@ body.dark-mode p {
     color: #cbd5e1;
 }
 
+/* Navigation links */
 body.dark-mode nav a,
 body.dark-mode #mobile-menu a {
     color: #cbd5e1;
@@ -151,6 +232,7 @@ body.dark-mode #mobile-menu {
     border-color: #475569;
 }
 
+/* Icons and buttons */
 body.dark-mode #theme-toggle-desktop i,
 body.dark-mode #theme-toggle-mobile i,
 body.dark-mode #mobile-menu-button i {
@@ -171,6 +253,7 @@ body.dark-mode .social-icon:hover {
     color: #fbbf24;
 }
 
+/* Project cards */
 body.dark-mode .project-card {
     background-color: #334155;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
@@ -196,15 +279,18 @@ body.dark-mode .project-image:hover img {
     filter: brightness(0.85);
 }
 
-body.dark-mode .bg-yellow-100 {
-    background-color: rgba(110, 110, 110, 0.803);
-    color: #cbd5e1;
+/* Project skill tags in dark mode */
+body.dark-mode .bg-gray-100 {
+    background-color: rgba(120, 132, 150, 0.7);
+    color: #cbd5e1ed;
 }
 
+/* Design gallery */
 body.dark-mode .design-item {
     background-color: #475569;
 }
 
+/* Back to top button */
 body.dark-mode #back-to-top {
     background-color: #334155;
     border-color: rgba(251, 191, 36, 0.4);
@@ -215,6 +301,7 @@ body.dark-mode #back-to-top:hover {
     border-color: rgba(251, 191, 36, 0.6);
 }
 
+/* Footer */
 body.dark-mode footer {
     background-color: #334155;  
     color: #cbd5e1; 

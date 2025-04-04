@@ -4,8 +4,8 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
         }
-    });
-}, { threshold: 0.1 });
+                });
+}, { threshold: 0.2 });
 
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
@@ -187,7 +187,7 @@ function generateProjectCards(projects) {
         // Skills section
         let skills = '';
         project.skills.forEach(skill => {
-            skills += `<span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">${skill}</span>`;
+            skills += `<span class="bg-gray-100 px-3 py-1 rounded-full text-sm">${skill}</span>`;
         });
         
         // Generate card HTML
@@ -220,5 +220,4 @@ function generateProjectCards(projects) {
         container.appendChild(card);
     });
 }
-
 // Less reduncdant code for the project cards over
