@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ziwen Zhou</title>
+    <title>Ziwen Zhou - Developer & Designer | Cello Player | Cinephile</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -91,8 +91,8 @@
     <!-- Hero Section with Particles Background -->
     <div id="particles-js" class="absolute inset-0 z-0 opacity-50"></div>
     
-    <!-- Intro Section -->
     <main class="container mx-auto px-6 py-20 relative z-10">
+        <!-- Intro Section -->
         <section class="text-center mb-20 fade-in">
             <div class="max-w-2xl mx-auto">
                 <p class="text-4xl text-yellow-500 mb-4 font-[Griffy] transform">Ziwen Zhou</p>
@@ -116,7 +116,7 @@
                     </p>
 
                     <p class="text-slate-600 text-lg leading-relaxed mt-4">
-                        Currently a graduate student at the University of Technology Sydney (UTS), majoring in Information Technology, Software Development. I have experience in UI/UX Design, Web Development, iOS Development and a strong interest in Music Technology. When I'm not coding, you can find me practicing cello or binge watching movies. :)
+                        Currently a graduate student at the University of Technology Sydney (UTS), majoring in Information Technology, Software Development. I have experience in UI/UX Design, Web Development, iOS Development and a strong interest in Music Technology. When I'm not coding, you'll find me practicing Cello or hunting for hidden gems at Film Festivals. :)
                     </p>
                 </div>
                 <div class="order-1 md:order-2">
@@ -131,72 +131,117 @@
         <section id="projects" class="mb-28 scroll-mt-20">
             <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">Featured Projects</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Project Card -->
+                <!-- Personal Website Project Card -->
                 <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
-                    <div class="h-52 bg-slate-100 rounded-lg mb-4 project-image"></div>
+                    <div class="group relative h-52 rounded-lg mb-4 overflow-hidden transition-all duration-300 project-image">
+                        <img 
+                            src="images/mainbg.JPG" 
+                            alt="Ziwen Zhou's Personal Website and Portfolio"
+                            class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                            loading="lazy"
+                        >
+                        <!-- TODO? Need to update the link to case study page? -->
+                        <a href="#" class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-medium">View Case Study →</span>
+                        </a>
+                    </div>
+                    
                     <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-semibold">MindCapsule</h3>
+                        <h3 class="text-xl font-semibold">Personal Website</h3>
                         <div class="flex gap-3 text-slate-500">
-                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
+                            <a href="https://ziwenzhou.com/" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
-                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
+                            <a href="https://github.com/zzwzzwzz/PersonalWebsite" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="text-slate-600 mb-4">Short project description highlighting technologies used.</p>
+                    <p class="text-slate-600 mb-4">Ziwen Zhou's Personal Website and Portfolio (Current website). A Sydney-based full-stack developer and designer combining technical experience with musical and cinematic storytelling.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Responsive Design</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Cloudflare</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Web Design</span>
+                    </div>
+                </div>
+
+                <!-- MindCapsule Project Card -->
+                <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                    <div class="group relative h-52 rounded-lg mb-4 overflow-hidden transition-all duration-300 project-image">
+                        <img 
+                            src="images/mindcapsule.png" 
+                            alt="MindCapsule"
+                            class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                            loading="lazy"
+                        >
+                        <!-- TODO? Need to update the link to mindcapsule.html case study page -->
+                        <a href="https://devpost.com/software/sirius-gqlych" class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-medium">View Case Study →</span>
+                        </a>
+                    </div>
+                    
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">Mind Capsule</h3>
+                        <div class="flex gap-3 text-slate-500">
+                            <a href="https://mindcapsule-sirius.vercel.app/" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/zzwzzwzz/MindCapsule" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 mb-4">MindCapsule is a Full-Stack Hackathon (UNIHACK 2025) project, designed to help individuals better understand and manage their emotions, using principles from Cognitive Behavioral Therapy (CBT). Name was inspired by Time Capsule.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
                         <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Node.js</span>
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Swift</span>
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">iOS</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Vercel</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Rapid Prototyping</span>
                     </div>
                 </div>
                 
+                <!-- BeThere Project Card-->
                 <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
-                    <div class="h-52 bg-slate-100 rounded-lg mb-4 project-image"></div>
+                    <div class="group relative h-52 rounded-lg mb-4 overflow-hidden transition-all duration-300 project-image">
+                        <!-- TODO Need to update the image and alt -->
+                        <img 
+                            src="images/mainbg.JPG" 
+                            alt="BeThere"
+                            class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                            loading="lazy"
+                        >
+                        <!-- TODO? Need to update the link to bethere.html case study page -->
+                        <a href="#" class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white font-medium">View Case Study →</span>
+                        </a>
+                    </div>
                     <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-semibold">Project 2</h3>
+                        <h3 class="text-xl font-semibold">Be There</h3>
                         <div class="flex gap-3 text-slate-500">
-                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
+                            <!-- TODO Need to add the demo video link later -->
+                            <!-- <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a> -->
+                            <a href="https://github.com/zzwzzwzz/BeThere" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
-                    <p class="text-slate-600 mb-4">Short project description highlighting technologies used.</p>
+                    <p class="text-slate-600 mb-4">BeThere is an iOS app built with Swift via the Apple Foundation Program @UTS, it connects Working Holiday Visa (WHV) holders in Australia in small groups of 6 to foster real-world meetups, using playful AI (A Rat Bot) to spark conversations and ensure active engagement.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">React</span>
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Node.js</span>
                         <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Swift</span>
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">iOS</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">iOS Development</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Design Thinking</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Rapid Prototyping</span>
                     </div>
                 </div>
                 
-                <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
-                    <div class="h-52 bg-slate-100 rounded-lg mb-4 project-image"></div>
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-xl font-semibold">Project 3</h3>
-                        <div class="flex gap-3 text-slate-500">
-                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p class="text-slate-600 mb-4">Short project description highlighting technologies used.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">React</span>
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Node.js</span>
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Swift</span>
-                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">iOS</span>
-                    </div>
-                </div>
             </div>
         </section>
 

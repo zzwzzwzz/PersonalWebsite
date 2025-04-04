@@ -188,6 +188,14 @@ body.dark-mode .project-image {
     background-color: #475569;
 }
 
+body.dark-mode .project-image img {
+    filter: brightness(0.9) contrast(1.1);
+}
+
+body.dark-mode .project-image:hover img {
+    filter: brightness(0.85);
+}
+
 body.dark-mode .design-item {
     background-color: #475569;
 }
