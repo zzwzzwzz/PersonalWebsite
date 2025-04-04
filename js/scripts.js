@@ -132,7 +132,7 @@ particlesJS('particles-js', {
 
 // Less redundant code for the project cards
 // Fetch project data
-fetch('data/projects.json')
+fetch('/data/projects.json')
     .then(response => {
         if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -221,6 +221,4 @@ function generateProjectCards(projects) {
     });
 }
 
-// Call the function when the DOM is loaded
-document.addEventListener('DOMContentLoaded', generateProjectCards);
 // Less reduncdant code for the project cards over
