@@ -1,4 +1,4 @@
-/* Custom Animations */
+/* FadeIn Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -14,7 +14,7 @@
 
 /* Dark mode transition */
 .dark-mode-transition * {
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 /* Back to Top Button */
@@ -23,8 +23,8 @@
 }
 
 @keyframes bounce {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(-3px); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
 }
 
 /* Consistent animations */
@@ -47,4 +47,162 @@
 
 #mobile-menu-button:hover {
     transform: scale(1.05);
+}
+
+/* Theme Toggle Animation */
+#theme-toggle-desktop:hover i,
+#theme-toggle-mobile:hover i {
+    transform: rotate(30deg);
+}
+
+#theme-toggle-desktop i,
+#theme-toggle-mobile i {
+    transition: transform 0.5s ease;
+}
+
+/* Project Card Hover Effects */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Design gallery */
+.design-item {
+    transition: all 0.3s ease; 
+    position: relative;
+}
+
+.design-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Profile image effects */
+.profile-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.profile-image {
+    transition: all 0.5s ease;
+}
+
+.profile-container:hover .profile-image {
+    transform: scale(1.03);
+}
+
+/* Social icons animation */
+.social-icon {
+    display: inline-block;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(to bottom right, #1e293b, #334155);
+    color: #f8fafc;
+}
+
+body.dark-mode header {
+    background-color: rgba(30, 41, 59, 0.8);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode #typing-text {
+    color: #f8fafc;
+}
+
+body.dark-mode h1 a {
+    color: #fbbf24;
+}
+
+body.dark-mode p {
+    color: #cbd5e1;
+}
+
+body.dark-mode nav a,
+body.dark-mode #mobile-menu a {
+    color: #cbd5e1;
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode #mobile-menu a:hover {
+    color: #fbbf24;
+}
+
+body.dark-mode #mobile-menu {
+    background-color: #1e293b;
+    border-color: #475569;
+}
+
+body.dark-mode #theme-toggle-desktop i,
+body.dark-mode #theme-toggle-mobile i,
+body.dark-mode #mobile-menu-button i {
+    color: #cbd5e1;
+}
+
+body.dark-mode #theme-toggle-desktop:hover,
+body.dark-mode #theme-toggle-mobile:hover,
+body.dark-mode #mobile-menu-button:hover {
+    color: #fbbf24;
+}
+
+body.dark-mode .social-icon {
+    color: #cbd5e1;
+}
+
+body.dark-mode .social-icon:hover {
+    color: #fbbf24;
+}
+
+body.dark-mode .project-card {
+    background-color: #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .project-card h3 {
+    color: #f1f5f9;
+}
+
+body.dark-mode .project-card p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .project-image {
+    background-color: #475569;
+}
+
+body.dark-mode .design-item {
+    background-color: #475569;
+}
+
+body.dark-mode #back-to-top {
+    background-color: #334155;
+    border-color: rgba(251, 191, 36, 0.4);
+    color: #fbbf24;
+}
+
+body.dark-mode #back-to-top:hover {
+    border-color: rgba(251, 191, 36, 0.6);
+}
+
+body.dark-mode footer {
+    background-color: #334155;  
+    color: #cbd5e1; 
 }

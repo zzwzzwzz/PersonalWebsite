@@ -36,24 +36,44 @@
                 <h1 class="text-3xl font-[Griffy] font-bold text-yellow-400"><a href="index.html">ZZ</a></h1>
                 
                 <!-- Desktop Menu -->
-                <ul class="hidden md:flex space-x-8">
+                <ul class="hidden md:flex items-center space-x-8">
                     <li><a href="#about" class="text-slate-600 hover:text-yellow-600 transition-colors">About</a></li>
                     <li><a href="#projects" class="text-slate-600 hover:text-yellow-600 transition-colors">Projects</a></li>
                     <li><a href="#design" class="text-slate-600 hover:text-yellow-600 transition-colors">Design</a></li>
                     <li><a href="#contact" class="text-slate-600 hover:text-yellow-600 transition-colors">Contact</a></li>
+                    
+                    <!-- Dark Mode Toggle for Desktop -->
+                    <li>
+                        <button 
+                            id="theme-toggle-desktop" 
+                            class="p-2 rounded-lg transition-all text-slate-600 hover:text-yellow-600"
+                            aria-label="Toggle dark mode"
+                        >
+                            <i class="fas fa-sun text-xl transition-all duration-300"></i>
+                        </button>
+                    </li>
                 </ul>
-    
-                <!-- Mobile Menu Button -->
-                <button 
-                    id="mobile-menu-button" 
-                    class="md:hidden p-2 rounded-lg transition-all"
-                    aria-label="Mobile menu"
-                >
-                    <i class="fas fa-bars text-slate-600 text-xl transition-transform duration-300"></i>
-                </button>
-
-                <!-- TODO Add an icon to make it switch between dark mode and daylight mode -->
-
+                
+                <!-- Mobile Controls -->
+                <div class="flex items-center gap-2 md:hidden">
+                    <!-- Dark Mode Toggle for Mobile -->
+                    <button 
+                        id="theme-toggle-mobile" 
+                        class="p-2 rounded-lg transition-all text-slate-600 hover:text-yellow-600"
+                        aria-label="Toggle dark mode"
+                    >
+                        <i class="fas fa-sun text-xl transition-all duration-300"></i>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button 
+                        id="mobile-menu-button" 
+                        class="p-2 rounded-lg transition-all"
+                        aria-label="Mobile menu"
+                    >
+                        <i class="fas fa-bars text-slate-600 text-xl transition-transform duration-300"></i>
+                    </button>
+                </div>
             </div>
     
             <!-- Mobile Dropdown Menu -->
@@ -68,15 +88,16 @@
         </nav>
     </header>
 
-    <!-- TODO Add a nice background picture? -->
+    <!-- Hero Section with Particles Background -->
+    <div id="particles-js" class="absolute inset-0 z-0 opacity-50"></div>
+    
     <!-- Intro Section -->
-    <main class="container mx-auto px-6 py-20">
-        <section class="text-center mb-28 fade-in">
+    <main class="container mx-auto px-6 py-20 relative z-10">
+        <section class="text-center mb-20 fade-in">
             <div class="max-w-2xl mx-auto">
                 <p class="text-4xl text-yellow-500 mb-4 font-[Griffy] transform">Ziwen Zhou</p>
-                <h2 class="text-4xl font-bold text-slate-800 mb-6">Creating Digital Experiences with Art & Code</h2>
                 <div class="flex justify-center space-x-4">
-                    <a href="#contact" class="bg-yellow-500 text-white px-8 py-3 rounded-full hover:bg-yellow-700 transition-all">
+                    <a href="#contact" class="bg-yellow-500 text-white px-8 py-3 rounded-full hover:bg-yellow-700 transition-all hover:scale-105">
                         Get in Touch
                     </a>
                 </div>
@@ -87,48 +108,106 @@
         <section id="about" class="mb-28 scroll-mt-20">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
-                    <h2 class="text-4xl font-bold text-slate-800 dark:text-slate-100 mb-6">About Me</h2>
-                    <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
-                        Hihi~ I'm Ziwen (ZZ or Zizi). A Web Designer and Full-Stack Developer based in Sydney, Australia.
+                    <h2 class="text-4xl font-bold text-slate-800 mb-6 relative">
+                        About Me
+                    </h2>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Hihi~ I'm Ziwen, friends also call me ZZ or Zizi. A Full-Stack Developer based in Sydney, Australia.
                     </p>
-                    <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mt-4">
-                        I'm currently a graduate student at the University of Technology Sydney (UTS), majoring in Information Technology, Software Development. I have experience in UI/UX Design, Web Development, iOS Development and a strong interest in Music Technology. When I'm not coding, you can find me playing cello or binge watching films. :)
-                    </p>
-                    <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mt-4">
-                        I'm currently looking for opportunities to work on exciting projects and expand my skill set. If you're interested in collaborating or just want to chat, feel free to reach out!
+
+                    <p class="text-slate-600 text-lg leading-relaxed mt-4">
+                        Currently a graduate student at the University of Technology Sydney (UTS), majoring in Information Technology, Software Development. I have experience in UI/UX Design, Web Development, iOS Development and a strong interest in Music Technology. When I'm not coding, you can find me practicing cello or binge watching movies. :)
                     </p>
                 </div>
                 <div class="order-1 md:order-2">
-                    <img src="images/ziwenzhou.jpg" alt="Ziwen Zhou" 
-                         class="rounded-2xl shadow-xl hover-tilt transition-transform duration-300 w-full max-w-md mx-auto">
+                    <div class="profile-container">
+                        <img src="images/ziwenzhou.jpg" alt="Ziwen Zhou" class="rounded-2xl shadow-xl transition-transform duration-300 w-full max-w-md mx-auto profile-image">
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="mb-28 scroll-mt-20">
-            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">Projects</h2>
+            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">Featured Projects</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                    <div class="h-48 bg-slate-100 rounded-lg mb-4"></div>
-                    <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+                <!-- Project Card -->
+                <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                    <div class="h-52 bg-slate-100 rounded-lg mb-4 project-image"></div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">MindCapsule</h3>
+                        <div class="flex gap-3 text-slate-500">
+                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                     <p class="text-slate-600 mb-4">Short project description highlighting technologies used.</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">React</span>
                         <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Node.js</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Swift</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">iOS</span>
                     </div>
                 </div>
-                <!-- TODO Add more project cards -->
-                <!-- TODO Add icon link to the project and github pages -->
+                
+                <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                    <div class="h-52 bg-slate-100 rounded-lg mb-4 project-image"></div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">Project 2</h3>
+                        <div class="flex gap-3 text-slate-500">
+                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 mb-4">Short project description highlighting technologies used.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Node.js</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Swift</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">iOS</span>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all">
+                    <div class="h-52 bg-slate-100 rounded-lg mb-4 project-image"></div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">Project 3</h3>
+                        <div class="flex gap-3 text-slate-500">
+                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="social-icon hover:text-yellow-600 transition-colors" aria-label="View code on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 mb-4">Short project description highlighting technologies used.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">React</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Node.js</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Swift</span>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">iOS</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Design Section -->
         <section id="design" class="mb-28 scroll-mt-20">
-            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">Design Works</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="aspect-square bg-slate-100 rounded-xl"></div>
-                <!-- Add more design thumbnails -->
+            <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">Featured Design</h2>
+            <div class="design-gallery grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="design-item aspect-square bg-slate-100 rounded-xl cursor-pointer overflow-hidden"></div>
+                <div class="design-item aspect-square bg-slate-100 rounded-xl cursor-pointer overflow-hidden"></div>
+                <div class="design-item aspect-square bg-slate-100 rounded-xl cursor-pointer overflow-hidden"></div>
+                <div class="design-item aspect-square bg-slate-100 rounded-xl cursor-pointer overflow-hidden"></div>
             </div>
         </section>
 
@@ -137,16 +216,14 @@
             <div class="max-w-lg mx-auto text-center">
                 <h2 class="text-4xl font-bold text-slate-800 mb-8">Let's Connect!</h2>
                 <p class="text-slate-600 mb-8">Currently looking for opportunities to work on exciting projects and expand my skill set. If you're interested in collaborating or just want to chat, feel free to reach out!</p>
+                <!-- Logos linked to external websites -->
                 <div class="flex justify-center space-x-6 mb-8">
-                    <a href="https://www.linkedin.com/in/ziwenzhou/" class="text-slate-600 hover:text-yellow-600 transition-colors">
+                    <a href="https://www.linkedin.com/in/ziwenzhou/" class="social-icon text-slate-600 hover:text-yellow-600 transition-colors">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
-                    <a href="https://github.com/zzwzzwzz" class="text-slate-600 hover:text-yellow-600 transition-colors">
+                    <a href="https://github.com/zzwzzwzz" class="social-icon text-slate-600 hover:text-yellow-600 transition-colors">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
-                    
-                    <!-- Add more social icons, Douban, Bilibili, Rednote-->
-
                 </div>
                 <a href="mailto:ziwenzhou.zz@gmail.com" 
                    class="text-yellow-500 hover:text-yellow-700 font-medium">
@@ -159,7 +236,7 @@
     <!-- Go-to-top button -->
     <button 
         id="back-to-top" 
-        class="fixed bottom-8 right-8 w-12 h-12 flex items-center justify-center bg-white text-yellow-500 rounded-full shadow-lg backdrop-blur-lg transition-all duration-300 opacity-0 scale-90 hover:scale-100 border-2 border-yellow-500/40 hover:border-yellow-600/60 dark:bg-slate-800 dark:text-yellow-400 dark:border-yellow-400/40 dark:hover:border-yellow-300/60 focus:outline-none focus:ring-2 focus:ring-yellow-400/30"        
+        class="fixed bottom-8 right-8 w-12 h-12 flex items-center justify-center bg-white text-yellow-500 rounded-full shadow-lg backdrop-blur-lg transition-all duration-300 opacity-0 scale-90 hover:scale-100 border-2 border-yellow-500/40 hover:border-yellow-600/60 focus:outline-none focus:ring-2 focus:ring-yellow-400/30 z-[100]"
         aria-label="Back to top"
     >
         <i class="fas fa-arrow-up text-xl"></i>
@@ -171,6 +248,9 @@
         </div>
     </footer>
 
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
     <!-- JavaScript -->
     <script src="js/scripts.js"></script>
 

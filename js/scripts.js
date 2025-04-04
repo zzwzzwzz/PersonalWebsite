@@ -48,7 +48,6 @@ document.addEventListener('click', (e) => {
     if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
         mobileMenu.classList.add('hidden');
         mobileMenuButton.querySelector('i').style.transform = 'rotate(0deg)';
-        // mobileMenuButton.classList.remove('bg-yellow-100');
         mobileMenuButton.querySelector('i').classList.remove('text-yellow-600');
     }
 });
@@ -61,7 +60,71 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
         target.scrollIntoView({ behavior: 'smooth' });
         mobileMenu.classList.add('hidden');
         mobileMenuButton.querySelector('i').style.transform = 'rotate(0deg)';
-        // mobileMenuButton.classList.remove('bg-yellow-100');
         mobileMenuButton.querySelector('i').classList.remove('text-yellow-600');
     });
+});
+
+// Dark Mode Toggle
+const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+const body = document.body;
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Function to set the theme
+function setTheme(isDark) {
+    if (isDark) {
+        body.classList.add('dark-mode');
+        document.querySelectorAll('#theme-toggle-desktop i, #theme-toggle-mobile i').forEach(icon => {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        });
+        localStorage.setItem('theme', 'dark');
+    } else {
+        body.classList.remove('dark-mode');
+        document.querySelectorAll('#theme-toggle-desktop i, #theme-toggle-mobile i').forEach(icon => {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        });
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Set initial theme based on preference
+const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+setTheme(currentTheme === 'dark');
+
+// Toggle theme on button click
+[themeToggleDesktop, themeToggleMobile].forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const isDark = body.classList.contains('dark-mode');
+        setTheme(!isDark);
+    });
+});
+
+// Particles.js Configuration
+particlesJS('particles-js', {
+    particles: {
+        number: { value: 80 },
+        color: { value: '#f59e0b' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        move: {
+            enable: true,
+            speed: 6,
+            direction: 'none',
+            random: false,
+            straight: false,
+            out_mode: 'out',
+            bounce: false,
+        }
+    },
+    interactivity: {
+        detect_on: 'canvas',
+        events: {
+            onhover: { enable: true, mode: 'repulse' },
+            onclick: { enable: true, mode: 'push' },
+            resize: true
+        }
+    }
 });
