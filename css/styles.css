@@ -196,6 +196,11 @@ body.dark-mode .project-image:hover img {
     filter: brightness(0.85);
 }
 
+body.dark-mode .bg-yellow-100 {
+    background-color: rgba(110, 110, 110, 0.803);
+    color: #cbd5e1;
+}
+
 body.dark-mode .design-item {
     background-color: #475569;
 }
