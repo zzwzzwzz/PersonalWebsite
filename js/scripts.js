@@ -168,8 +168,8 @@ function generateProjectCards(projects) {
         
         // Links section
         let links = '';
-        if (project.projectLink) {
-            links += `<a href="${project.projectLink}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="View project">
+        if (project.Link) {
+            links += `<a href="${project.Link}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="View project">
                         <i class="fas fa-external-link-alt"></i>
                       </a>`;
         }
