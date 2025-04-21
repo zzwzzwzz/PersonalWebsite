@@ -153,6 +153,9 @@ fetch('/data/projects.json')
                 description: "This is a fallback project shown when the JSON data cannot be loaded.",
                 projectLink: "#",
                 codeLink: "#",
+                youtubeLink: "#",
+                donateLink: "#",
+                caseStudyLink: "#",
                 skills: ["Web Development"]
             }
         ]);

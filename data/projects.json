@@ -4,7 +4,7 @@
         "image": "images/fishtalk.png",
         "alt": "Fish Talk's documentary project From Far Away to G'Day",
         "description": "From Far Away to G'Day is a documentary spotlighting six Asian immigrants' transformative journeys in Australia, from international students to community pioneers. For this project, I help with designing the pitch deck, film posters and maintaining the website using Wix. <a href=\"https://documentaryaustralia.com.au/project/from-far-away-to-gday/\" class=\"text-yellow-500 hover:text-yellow-600\">Support us</a> to challenge stereotypes and celebrate diversity!",
-        "projectLink": "https://www.fishtalkglobal.com/from-far-away-to-gday",
+        "projectLink": "https://www.fishtalkglobal.com/fromfarawaytogday",
         "donateLink": "https://documentaryaustralia.com.au/project/from-far-away-to-gday/",
         "skills": ["Poster Design", "Web Design", "Wix", "SEO", "Marketing"]
     },
@@ -23,7 +23,7 @@
         "image": "images/MindCapsule.png",
         "alt": "MindCapsule is a Full-Stack Hackathon (UNIHACK 2025) project, designed to help individuals better understand and manage their emotions, using principles from Cognitive Behavioral Therapy (CBT). Name was inspired by Time Capsule.",
         "description": "MindCapsule is a Full-Stack Hackathon (UNIHACK 2025) project, designed to help individuals better understand and manage their emotions, using principles from Cognitive Behavioral Therapy (CBT). Name was inspired by Time Capsule.",
-        "Link": "https://mindcapsule-sirius.vercel.app/",
+        "projectLink": "https://mindcapsule-sirius.vercel.app/",
         "caseStudyLink": "https://devpost.com/software/sirius-gqlych",
         "codeLink": "https://github.com/zzwzzwzz/MindCapsule",
         "skills": ["HTML", "Tailwind CSS", "Node.js", "JavaScript", "MongoDB", "Vercel", "Rapid Prototyping"]
