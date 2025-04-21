@@ -168,8 +168,8 @@ function generateProjectCards(projects) {
         
         // Links section
         let links = '';
-        if (project.Link) {
-            links += `<a href="${project.Link}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="View project">
+        if (project.projectLink) {
+            links += `<a href="${project.projectLink}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="View project">
                         <i class="fas fa-external-link-alt"></i>
                       </a>`;
         }
@@ -180,7 +180,7 @@ function generateProjectCards(projects) {
         }
         if (project.youtubeLink) {
             links += `<a href="${project.youtubeLink}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Watch demo on YouTube">
-                        <i class="fab fa-youtube"></i>
+                        <i class="fa fa-youtube-play"></i>
                       </a>`;
         }
         if (project.donateLink) {

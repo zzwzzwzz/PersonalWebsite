@@ -5,7 +5,6 @@
         "alt": "Fish Talk's documentary project From Far Away to G'Day",
         "description": "From Far Away to G'Day is a documentary spotlighting six Asian immigrants' transformative journeys in Australia, from international students to community pioneers. For this project, I help with designing the pitch deck, film posters and maintaining the website using Wix. <a href=\"https://documentaryaustralia.com.au/project/from-far-away-to-gday/\" class=\"text-yellow-500 hover:text-yellow-600\">Support us</a> to challenge stereotypes and celebrate diversity!",
         "projectLink": "https://www.fishtalkglobal.com/from-far-away-to-gday",
-        "Link": "https://www.fishtalkglobal.com/mediarelease20250310",
         "donateLink": "https://documentaryaustralia.com.au/project/from-far-away-to-gday/",
         "skills": ["Poster Design", "Web Design", "Wix", "SEO", "Marketing"]
     },
@@ -14,6 +13,7 @@
         "image": "images/BubblePop.png",
         "alt": "BubblePop is an iOS game, UTS 42889 iOS Development Assignment 2",
         "description": "BubblePop is an iOS game with real-time scoring, physics-based animations, and good UI/UX design, demonstrating full-stack Swift development with CoreData integration and MVVM architecture for optimized performance.",
+        "projectLink": "https://appetize.io/app/b_hhjdzg2mbhlyvhyrmdomzoaosi",
         "codeLink": "https://github.com/zzwzzwzz/BubbleGame",
         "youtubeLink": "https://youtube.com/shorts/aDDCHg4o6YI",
         "skills": ["Swift", "SwiftUI", "Xcode", "MVVM", "iOS Development", "Game Development"]
