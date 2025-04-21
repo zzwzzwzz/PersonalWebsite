@@ -178,6 +178,11 @@ function generateProjectCards(projects) {
                         <i class="fab fa-github"></i>
                       </a>`;
         }
+        if (project.youtubeLink) {
+            links += `<a href="${project.youtubeLink}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Watch demo on YouTube">
+                        <i class="fab fa-youtube"></i>
+                      </a>`;
+        }
         if (project.donateLink) {
             links += `<a href="${project.donateLink}" class="social-icon hover:text-yellow-600 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Donate and Support">
                         <i class="fa-solid fa-hand-holding-heart"></i>
