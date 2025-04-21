@@ -204,11 +204,15 @@ function generateProjectCards(projects) {
                     class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                 >
-                <a href="${project.caseStudyLink || project.projectLink || '#'}" 
+                <a href="${project.caseStudyLink || project.projectLink || project.youtubeLink || '#'}" 
                    target="_blank" 
                    rel="noopener noreferrer" 
                    class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <span class="text-white font-medium">${project.caseStudyLink ? 'View Case Study →' : 'View →'}</span>
+                    <span class="text-white font-medium">${
+                        project.caseStudyLink ? 'View Case Study →' : 
+                        project.youtubeLink && !project.projectLink ? 'Watch Demo →' : 
+                        'View →'
+                    }</span>
                 </a>
             </div>
             
